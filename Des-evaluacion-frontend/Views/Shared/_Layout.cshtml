@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <script src="~/js/site.js"></script>
+</head>
+<body>
+<div class="container">
+    <main role="main" class="pb-3">
+        
+        @RenderSection("", false)
+        
+        @RenderBody()
+    </main>
+</div>
+
+<script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8-egV-aGJtrHy8p8KE8wCB5_EzmuGeX4&callback=initMap">
+</script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
