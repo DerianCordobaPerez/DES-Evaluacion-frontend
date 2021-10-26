@@ -1,0 +1,24 @@
+﻿@import 'components/map.css';
+
+* {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.border-left {
+  border-left: 3px solid #017e73;
+}
+
+.header {
+  background: #fff;
+  padding: 5px;
+  line-height: 5px;
+}
+
+.header-sub-title {
+  font-size: 8px;
+}
