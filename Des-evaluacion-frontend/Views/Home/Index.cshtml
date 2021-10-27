@@ -2,9 +2,43 @@
     ViewData["Title"] = "DES-Evaluacion-Frontend";
 }
 
-<div class="border-left header">
-    <h3 class="header-title">Analisis casos COVID</h3>
-    <p class="header-sub-title">Lorem ipsum dolor sit amet.</p>
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/site.css"/>
+}
+
+@section Header
+{
+    <header class="header">
+        <div class="header-content">
+            <h3 class="header-title">An&aacutelisis casos COVID-19 Centroamerica</h3>
+            <p class="header-sub-title">Estado pandemia</p>
+        </div>
+    </header>
+}
+
+@section Sidebar
+{
+    <aside class="sidebar">
+        
+    </aside>
+}
+
+<div class="content-map">
+    <div id="map"></div>
 </div>
 
-<div id="map"></div>
+@section Footer
+{
+    <footer class="footer">
+        <div id="highchart-bar" class=""></div>
+        <div id="highchart-line" class=""></div>
+    </footer>
+}
+
+@section Scripts
+{
+    <script src="~/js/site.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8-egV-aGJtrHy8p8KE8wCB5_EzmuGeX4&callback=initMap"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+}

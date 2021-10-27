@@ -1,0 +1,15 @@
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100%;
+    grid-gap: 10px;
+}
+
+.footer > div {
+    width: 100%;
+    background: #fff;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    box-shadow: 6px 5px 10px 0 rgba(0, 0, 0, .3);
+}

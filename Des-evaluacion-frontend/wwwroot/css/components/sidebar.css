@@ -1,0 +1,6 @@
+.sidebar {
+    background: green;
+    grid-area: sidebar;
+    overflow-y: auto;
+}
+
