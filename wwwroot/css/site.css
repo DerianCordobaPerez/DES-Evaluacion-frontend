@@ -3,6 +3,8 @@
 @import 'components/map.css';
 @import 'components/footer.css';
 
+@import 'root.css';
+
 body {
   margin: 30px auto;
   width: 85vw;

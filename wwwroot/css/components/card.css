@@ -1,0 +1,42 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 30px 30px 30px;
+    grid-template-areas: 
+        "card-content card-content card-content card-content"
+        "card-body card-body card-body card-body"
+        "card-footer card-footer card-footer card-footer"
+    ;
+    grid-gap: 5px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 6px 5px 10px 0 rgba(0, 0, 0, .2);
+    margin-top: 10px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #00ACEC;
+    grid-area: card-content;
+}
+
+.card-title {
+    margin-left: 10px;
+}
+
+.card-body {
+    grid-area: card-body;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.card-body > img {
+    width: 30px;
+    height: 30px;
+}
+
+.card-footer {
+    grid-area: card-footer;
+}

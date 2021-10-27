@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6" height="6" viewBox="0 0 6 6">
+  <defs>
+    <clipPath id="clip-ICN_Flechaarriba">
+      <rect width="6" height="6"/>
+    </clipPath>
+  </defs>
+  <g id="ICN_Flechaarriba" clip-path="url(#clip-ICN_Flechaarriba)">
+    <path id="Polígono_1" data-name="Polígono 1" d="M3,0,6,4H0Z" transform="translate(0 1)" fill="#676767"/>
+  </g>
+</svg>
