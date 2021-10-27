@@ -1,10 +1,19 @@
-﻿let map
+﻿let map, initialPosition
 
 function initMap() {
+    initialPosition = new google.maps.LatLng(12.483979477244299, -86.21416043359112)
+    
     map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
+        center: initialPosition,
+        zoom: 5,
     })
+
+    const marker = new google.maps.Marker({
+        position: initialPosition,
+        title: "Hello world"
+    })
+
+    marker.setMap(map)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
