@@ -6937,11 +6937,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/derian-cordoba/Documentos/Trabajo/Ingenio san antonio/DES-Evaluacion-frontend/Des-evaluacion-frontend/Des-evaluacion-frontend.csproj",
+      "projectUniqueName": "/home/derian-cordoba/Documentos/Trabajo/Ingenio san antonio/DES-Evaluacion-frontend/Des-evaluacion-frontend.csproj",
       "projectName": "Des-evaluacion-frontend",
-      "projectPath": "/home/derian-cordoba/Documentos/Trabajo/Ingenio san antonio/DES-Evaluacion-frontend/Des-evaluacion-frontend/Des-evaluacion-frontend.csproj",
+      "projectPath": "/home/derian-cordoba/Documentos/Trabajo/Ingenio san antonio/DES-Evaluacion-frontend/Des-evaluacion-frontend.csproj",
       "packagesPath": "/home/derian-cordoba/.nuget/packages/",
-      "outputPath": "/home/derian-cordoba/Documentos/Trabajo/Ingenio san antonio/DES-Evaluacion-frontend/Des-evaluacion-frontend/obj/",
+      "outputPath": "/home/derian-cordoba/Documentos/Trabajo/Ingenio san antonio/DES-Evaluacion-frontend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/derian-cordoba/.nuget/NuGet/NuGet.Config"
