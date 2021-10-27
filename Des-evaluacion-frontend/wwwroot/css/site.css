@@ -1,24 +1,24 @@
-﻿@import 'components/map.css';
+﻿@import 'components/header.css';
+@import 'components/sidebar.css';
+@import 'components/map.css';
+@import 'components/footer.css';
 
-* {
-  font-family: Arial, sans-serif;
+body {
+  margin: 30px auto;
+  width: 85vw;
+  height: 90vh;
+  overflow-y: hidden;
+  font-family: Tahoma, sans-serif;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-}
-
-.border-left {
-  border-left: 3px solid #017e73;
-}
-
-.header {
-  background: #fff;
-  padding: 5px;
-  line-height: 5px;
-}
-
-.header-sub-title {
-  font-size: 8px;
+  display: grid;
+  grid-template-rows: 50px 350px 150px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+    "header header header header"
+    "sidebar content-map content-map content-map"
+    "footer footer footer footer"
+  ;
+  grid-gap: 10px;
 }
