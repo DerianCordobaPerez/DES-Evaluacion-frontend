@@ -17,7 +17,7 @@
 .card-content {
     display: flex;
     align-items: center;
-    border-left: 2px solid #00ACEC;
+    border-left: 2px solid var(--sky-blue);
     grid-area: card-content;
 }
 
@@ -39,4 +39,20 @@
 
 .card-footer {
     grid-area: card-footer;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.card-footer-title, .card-footer-text {
+    margin: 0;
+    padding: 0;
+}
+
+.card-footer-title {
+    font-size: 12px;
+}
+
+.card-footer-text {
+    font-size: 10px;
 }
