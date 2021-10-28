@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<Des_evaluacion_frontend.Models.CountryInformation>
+
+@{
     ViewData["Title"] = "DES-Evaluacion-Frontend";
 }
 
@@ -20,11 +22,11 @@
 @section Sidebar
 {
     <aside class="sidebar">
-        @for (int i = 0; i < 10; i++)
+        @foreach(var countryInformation in @Model)
         {
             <div class="card">
                 <div class="card-content">
-                    <h4 class="card-title">Test</h4>
+                    <h4 class="card-title">@countryInformation.Country</h4>
                 </div>
                 
                 <div class="card-body">

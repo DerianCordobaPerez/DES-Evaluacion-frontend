@@ -18,7 +18,7 @@ namespace Des_evaluacion_frontend.Models
         public class DataCountryInformation
         {
             [JsonPropertyName("date")]
-            public DateTime Date { get; set; }
+            public string Date { get; set; }
             
             [JsonPropertyName("total_vaccinations")]
             public long TotalVaccinations { get; set; }
