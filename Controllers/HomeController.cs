@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Des_evaluacion_frontend.Models;
@@ -23,13 +21,17 @@ namespace Des_evaluacion_frontend.Controllers
 
         public IActionResult Index()
         {
-            var request = WebRequest.Create("https://api.jsonbin.io/b/614505444a82881d6c510a08");
+            // Request from api
+            var request = WebRequest.Create("https://api.jsonbin.io/b/614507ed4a82881d6c510b6b/10");
+            
+            // Response obtain from request api
             var response = request.GetResponse();
 
-            var countryInformation = JsonConvert.DeserializeObject<List<CountryInformation>>
+            // Object (ExtendedCountryInformation) obtain from json response
+            var extendedCountryInformation = JsonConvert.DeserializeObject<List<ExtendedCountryInformation>>
                 (new StreamReader(response.GetResponseStream()!).ReadToEnd());
 
-            return View(countryInformation!);
+            return View(extendedCountryInformation!);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
