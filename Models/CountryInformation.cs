@@ -13,9 +13,9 @@ namespace Des_evaluacion_frontend.Models
         public string IsoCode { get; set; }
         
         [JsonPropertyName("data")]
-        public List<DataInformation> Data { get; set; }
+        public List<DataCountryInformation> Data { get; set; }
 
-        public abstract class DataInformation
+        public class DataCountryInformation
         {
             [JsonPropertyName("date")]
             public DateTime Date { get; set; }
