@@ -10,7 +10,7 @@
       <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.11" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RunTimeCompilation" Version="5.0.11" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
       </PackageReference>
@@ -19,7 +19,9 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
       </PackageReference>
+      <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="5.0.1" />
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+      <PackageReference Include="newtonsoft.json" Version="13.0.1" />
       <PackageReference Include="pomelo.entityframeworkcore.mysql" Version="5.0.2" />
     </ItemGroup>
 

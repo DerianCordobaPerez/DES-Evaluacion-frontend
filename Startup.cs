@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
+using Polly;
 
 namespace Des_evaluacion_frontend
 {
@@ -27,6 +27,8 @@ namespace Des_evaluacion_frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            
+            // Context with mysql database
             services.AddDbContext<AppDBContext>(options => options.UseMySql(
                 Configuration.GetConnectionString("AppDBContextString"), 
                 new MySqlServerVersion(new Version(8, 0, 26))
