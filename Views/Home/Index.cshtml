@@ -1,4 +1,4 @@
-﻿@model List<Des_evaluacion_frontend.Models.CountryInformation>
+﻿@model List<Des_evaluacion_frontend.Models.ExtendedCountryInformation>
 
 @{
     ViewData["Title"] = "DES-Evaluacion-Frontend";
@@ -13,7 +13,7 @@
 {
     <header class="header">
         <div class="header-content">
-            <h3 class="header-title">An&aacutelisis casos COVID-19 Centroamerica</h3>
+            <h3 class="header-title">An&aacute;lisis casos COVID-19 Centroamerica</h3>
             <p class="header-sub-title">Estado pandemia</p>
         </div>
     </header>
@@ -22,11 +22,11 @@
 @section Sidebar
 {
     <aside class="sidebar">
-        @foreach(var countryInformation in @Model)
+        @foreach(var countryInformation in Model)
         {
             <div class="card">
                 <div class="card-content">
-                    <h4 class="card-title">@countryInformation.Country</h4>
+                    <h4 class="card-title">@countryInformation.Location</h4>
                 </div>
                 
                 <div class="card-body">
@@ -36,16 +36,27 @@
                     <img src="~/img/ICN_Poblacion_ – 3.svg" alt="img"/>
                 </div>
                 
-                <div class="card-footer">
-                    @for (int j = 0; j < 4; ++j)
-                    {
-                        <div>
-                            <h5 class="card-footer-title">9898</h5>
-                            <p class="card-footer-text">Millones</p>
-                        </div>
-                    }
-                </div>
-                
+                <d class="card-footer">
+                    <div>
+                        <h5 class="card-footer-title">@countryInformation.Population.ToString().Substring(0, 4)</h5>
+                        <p class="card-footer-text">Millones</p>
+                    </div>
+                    
+                    <div>
+                        <h5 class="card-footer-title">@countryInformation.MedianAge</h5>
+                        <p class="card-footer-text">Edad</p>
+                    </div>
+                    
+                    <div>
+                        <h5 class="card-footer-title">@countryInformation.LifeExpectancy</h5>
+                        <p class="card-footer-text">A&ntilde;os</p>
+                    </div>
+                    
+                    <div>
+                        <h5 class="card-footer-title">@countryInformation.HumanDevelopmentIndex</h5>
+                        <p class="card-footer-text">IDM</p>
+                    </div>
+                </d>
             </div>
         }
     </aside>
@@ -66,6 +77,7 @@
 @section Scripts
 {
     <script src="~/js/site.js"></script>
+    <script async src="~/js/helpers/highcharts.js"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8-egV-aGJtrHy8p8KE8wCB5_EzmuGeX4&callback=initMap"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
 }

@@ -1,166 +1,176 @@
+using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace Des_evaluacion_frontend.Models
 {
     public class ExtendedCountryInformation
     {
-        [JsonPropertyName("location")]
+        [JsonIgnore]
+        [Key]
+        public int Id { get; set; }
+        
+        [JsonProperty(PropertyName = "location")]
         public string Location { get; set; }
         
-        [JsonPropertyName("Population")]
+        [JsonProperty(PropertyName = "population")]
         public int Population { get; set; }
         
-        [JsonPropertyName("population_density")]
+        [JsonProperty(PropertyName = "population_density")]
         public double PopulationDensity { get; set; }
         
-        [JsonPropertyName("median_age")]
+        [JsonProperty(PropertyName = "median_age")]
         public double MedianAge { get; set; }
         
-        [JsonPropertyName("aged_65_older")]
+        [JsonProperty(PropertyName = "aged_65_older")]
         public double Aged65Older { get; set; }
         
-        [JsonPropertyName("aged_70_older")]
+        [JsonProperty(PropertyName = "aged_70_older")]
         public double Aged70Older { get; set; }
         
-        [JsonPropertyName("gdp_per_capita")]
+        [JsonProperty(PropertyName = "gdp_per_capita")]
         public double GdpPerCapita { get; set; }
         
-        [JsonPropertyName("extreme_poverty")]
+        [JsonProperty(PropertyName = "extreme_poverty")]
         public double ExtremePoverty { get; set; }
         
-        [JsonPropertyName("cardiovasc_death_rate")]
+        [JsonProperty(PropertyName = "cardiovasc_death_rate")]
         public double CardiovascDeathRate { get; set; }
         
-        [JsonPropertyName("diabetes_prevalence")]
+        [JsonProperty(PropertyName = "diabetes_prevalence")]
         public double DiabetesPrevalence { get; set; }
         
-        [JsonPropertyName("hospital_beds_per_thousand")]
+        [JsonProperty(PropertyName = "hospital_beds_per_thousand")]
         public double HospitalBedsPerThousand { get; set; }
         
-        [JsonPropertyName("life_expectancy")]
+        [JsonProperty(PropertyName = "life_expectancy")]
         public double LifeExpectancy { get; set; }
         
-        [JsonPropertyName("human_development_index")]
+        [JsonProperty(PropertyName = "human_development_index")]
         public double HumanDevelopmentIndex { get; set; }
         
-        [JsonPropertyName("lat")]
+        [JsonProperty(PropertyName = "lat")]
         public string Latitude { get; set; }
         
-        [JsonPropertyName("lon")]
+        [JsonProperty(PropertyName = "Lon")]
         public string Longitude { get; set; }
         
-        [JsonPropertyName("data")]
+        [JsonProperty(PropertyName = "data")]
         public List<DataExtendedCountryInformation> Data { get; set; }
         
-        [JsonPropertyName("female_smokers")]
+        [JsonProperty(PropertyName = "female_smokers")]
         public double? FemaleSmokers { get; set; }
         
-        [JsonPropertyName("male_smokers")]
+        [JsonProperty(PropertyName = "male_smokers")]
         public double? MaleSmokers { get; set; }
         
-        [JsonPropertyName("handwashing_facilities")]
+        [JsonProperty(PropertyName = "handwashing_facilities")]
         public double? HandwashingFacilities { get; set; }
         
         public class DataExtendedCountryInformation
         {
-            [JsonPropertyName("date")]
+            [JsonIgnore]
+            [Key]
+            public int Id { get; set; }
+            
+            [JsonProperty(PropertyName = "date")]
             public string Date { get; set; }
             
-            [JsonPropertyName("total_cases")]
+            [JsonProperty(PropertyName = "total_cases")]
             public int TotalCases { get; set; }
             
-            [JsonPropertyName("new_cases")]
+            [JsonProperty(PropertyName = "new_cases")]
             public int NewCases { get; set; }
             
-            [JsonPropertyName("new_cases_smoothed")]
+            [JsonProperty(PropertyName = "new_cases_smoothed")]
             public double NewCasesSmoothed { get; set; }
             
-            [JsonPropertyName("total_deaths")]
+            [JsonProperty(PropertyName = "total_deaths")]
             public int TotalDeaths { get; set; }
             
-            [JsonPropertyName("new_deaths")]
+            [JsonProperty(PropertyName = "new_deaths")]
             public int NewDeaths { get; set; }
             
-            [JsonPropertyName("new_deaths_smoothed")]
+            [JsonProperty(PropertyName = "new_deaths_smoothed")]
             public double NewDeathsSmoothed { get; set; }
             
-            [JsonPropertyName("total_cases_per_million")]
+            [JsonProperty(PropertyName = "total_cases_per_million")]
             public double TotalCasesPerMillion { get; set; }
             
-            [JsonPropertyName("new_cases_per_million")]
+            [JsonProperty(PropertyName = "new_cases_per_million")]
             public double NewCasesPerMillion { get; set; }
             
-            [JsonPropertyName("new_cases_smoothed_per_million")]
+            [JsonProperty(PropertyName = "new_cases_smoothed_per_million")]
             public double NewCasesSmoothedPerMillion { get; set; }
             
-            [JsonPropertyName("total_deaths_per_million")]
+            [JsonProperty(PropertyName = "total_deaths_per_million")]
             public double TotalDeathsPerMillion { get; set; }
             
-            [JsonPropertyName("new_deaths_per_million")]
+            [JsonProperty(PropertyName = "new_deaths_per_million")]
             public double NewDeathsPerMillion { get; set; }
             
-            [JsonPropertyName("new_deaths_smoothed_per_million")]
+            [JsonProperty(PropertyName = "new_deaths_smoothed_per_million")]
             public double NewDeathsSmoothedPerMillion { get; set; }
             
-            [JsonPropertyName("reproduction_rate")]
+            [JsonProperty(PropertyName = "reproduction_rate")]
             public double ReproductionRate { get; set; }
             
-            [JsonPropertyName("new_vaccinations_smoothed")]
+            [JsonProperty(PropertyName = "new_vaccinations_smoothed")]
             public int NewVaccinationsSmoothed { get; set; }
             
-            [JsonPropertyName("new_vaccinations_smoothed_per_million")]
+            [JsonProperty(PropertyName = "new_vaccinations_smoothed_per_million")]
             public int NewVaccinationsSmoothedPerMillion { get; set; }
             
-            [JsonPropertyName("stringency_index")]
+            [JsonProperty(PropertyName = "stringency_index")]
             public double StringencyIndex { get; set; }
             
-            [JsonPropertyName("total_vaccinations")]
+            [JsonProperty(PropertyName = "total_vaccinations")]
             public int? TotalVaccinations { get; set; }
             
-            [JsonPropertyName("people_vaccinated")]
+            [JsonProperty(PropertyName = "people_vaccinated")]
             public int? PeopleVaccinated { get; set; }
             
-            [JsonPropertyName("people_fully_vaccinated")]
+            [JsonProperty(PropertyName = "People_fully_vaccinated")]
             public int? PeopleFullyVaccinated { get; set; }
             
-            [JsonPropertyName("total_vaccinations_per_hundred")]
+            [JsonProperty(PropertyName = "total_vaccinations_per_hundred")]
             public double? TotalVaccinationsPerHundred { get; set; }
             
-            [JsonPropertyName("people_vaccinated_per_hundred")]
+            [JsonProperty(PropertyName = "people_vaccinated_per_hundred")]
             public double? PeopleVaccinatedPerHundred { get; set; }
             
-            [JsonPropertyName("people_fully_vaccinated_per_hundred")]
+            [JsonProperty(PropertyName = "people_fully_vaccinated_per_hundred")]
             public double? PeopleFullyVaccinatedPerHundred { get; set; }
             
-            [JsonPropertyName("new_tests")]
+            [JsonProperty(PropertyName = "new_tests")]
             public int? NewTests { get; set; }
             
-            [JsonPropertyName("total_tests")]
+            [JsonProperty(PropertyName = "total_tests")]
             public int? TotalTests { get; set; }
             
-            [JsonPropertyName("total_tests_per_thousand")]
+            [JsonProperty(PropertyName = "total_tests_per_thousand")]
             public double? TotalTestsPerThousand { get; set; }
             
-            [JsonPropertyName("new_tests_per_thousand")]
+            [JsonProperty(PropertyName = "new_tests_per_thousand")]
             public double? NewTestsPerThousand { get; set; }
             
-            [JsonPropertyName("new_tests_smoothed")]
+            [JsonProperty(PropertyName = "new_tests_smoothed")]
             public int? NewTestsSmoothed { get; set; }
             
-            [JsonPropertyName("new_tests_smoothed_per_thousand")]
+            [JsonProperty(PropertyName = "new_tests_smoothed_per_thousand")]
             public double? NewTestsSmoothedPerThousand { get; set; }
             
-            [JsonPropertyName("positive_rate")]
+            [JsonProperty(PropertyName = "positive_rate")]
             public double? PositiveRate { get; set; }
             
-            [JsonPropertyName("tests_per_case")]
+            [JsonProperty(PropertyName = "tests_per_case")]
             public double? TestsPerCase { get; set; }
             
-            [JsonPropertyName("tests_units")]
+            [JsonProperty(PropertyName = "tests_units")]
             public string TestsUnits { get; set; }
             
-            [JsonPropertyName("new_vaccinations")]
+            [JsonProperty(PropertyName = "new_vaccinations")]
             public int? NewVaccinations { get; set; }
         }
 

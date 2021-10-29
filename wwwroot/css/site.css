@@ -9,14 +9,13 @@ body {
   margin: 30px auto;
   width: 85vw;
   height: 90vh;
-  overflow-y: hidden;
   font-family: Tahoma, sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-rows: 50px 350px 150px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px 350px 250px;
+  grid-template-columns: 240px repeat(3, 1fr);
   grid-template-areas: 
     "header header header header"
     "sidebar content-map content-map content-map"
