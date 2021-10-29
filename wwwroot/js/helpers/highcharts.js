@@ -1,9 +1,3 @@
-const data = [
-    {location: 'Nicaragua', value: 110},
-    {location: 'Honduras', value: 20},
-    {location: 'El Salvador', value: 10},
-]
-
 /**
  * They display the highchart with the data 
  * passed as parameters.
@@ -65,23 +59,36 @@ const changeThemeHighchart = theme => {
     Highcharts.setOptions(Highcharts.theme);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    
+    let data = []
+
+    await getAllExtendedInformation()
+        .then(response => data = response)
+    
+    const locations = data.map(item => item.location)
+    
     const properties = {
         name: 'highchart-bar',
         type: 'column',
         title: {text: 'Total de Casos por pais (%)'},
-        xAxis: data.map(item => item.location),
+        xAxis: locations,
     }
-    
+
     const series = data.map(item => ({
         name: item.location,
-        data: [item.value]
+        data: [item.population]
     }))
     
     printHighChart(series, properties)
 })
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+
+    let data = []
+
+    await getAllExtendedInformation()
+        .then(response => data = response)
     
     const properties = {
         name: 'highchart-line',
@@ -92,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const series = data.map(item => ({
         name: item.location,
-        data: [item.value, item.value * 2, item.value * 3]
+        data: [item.population, item.population * 4, item.population * -3, item.population * -2, item.population * 10]
     }))
 
     printHighChart(series, properties)
