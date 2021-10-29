@@ -9,10 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb8da55-fc7b-4dd8-9d93-6aa4bb615327" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/wwwroot/js/Services/ExtendedInformationApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ExtendedCountryInformationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ExtendedCountryInformationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.dll" afterDir="false" />
@@ -20,12 +20,11 @@
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Des-evaluacion-frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Des-evaluacion-frontend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/js/Services/ExtendedInformationApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/Services/ExtendedInformationApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wwwroot/js/helpers/highcharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/helpers/highcharts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +121,7 @@
       <updated>1635309165273</updated>
       <workItem from="1635309184760" duration="9222000" />
       <workItem from="1635356077484" duration="16884000" />
-      <workItem from="1635465048860" duration="15292000" />
+      <workItem from="1635465048860" duration="20826000" />
     </task>
     <servers />
   </component>

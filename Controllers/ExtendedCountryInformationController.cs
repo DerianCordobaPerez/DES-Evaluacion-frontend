@@ -7,17 +7,18 @@ namespace Des_evaluacion_frontend.Controllers
 {
     public class ExtendedCountryInformationController : Controller
     {
-        private readonly IModelDao<ExtendedCountryInformation> _extendedCountryInformationService;
+        
+        private readonly AppDBContext _context;
 
-        public ExtendedCountryInformationController(IModelDao<ExtendedCountryInformation> extendedCountryInformationService)
+        public ExtendedCountryInformationController(AppDBContext context)
         {
-            _extendedCountryInformationService = extendedCountryInformationService;
+            _context = context;
         }
 
         [HttpGet("/extendedCountryInformation/getAll", Name = "ExtendedCountryInformationList")]
         public async Task<IActionResult> GetExtendedCountryInformation()
         {
-            var extendedCountryInformation = await _extendedCountryInformationService.GetDataList();
+            var extendedCountryInformation = await new ExtendedCountryInformationDao(_context).GetDataList();
             return Ok(extendedCountryInformation);
         }
     }
