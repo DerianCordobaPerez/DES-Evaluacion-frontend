@@ -14,7 +14,7 @@ namespace Des_evaluacion_frontend.Controllers
             _extendedCountryInformationService = extendedCountryInformationService;
         }
 
-        [HttpGet]
+        [HttpGet("/extendedCountryInformation/getAll", Name = "ExtendedCountryInformationList")]
         public async Task<IActionResult> GetExtendedCountryInformation()
         {
             var extendedCountryInformation = await _extendedCountryInformationService.GetDataList();
