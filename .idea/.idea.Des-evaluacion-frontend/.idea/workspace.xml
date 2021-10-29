@@ -9,26 +9,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb8da55-fc7b-4dd8-9d93-6aa4bb615327" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/ExtendedCountryInformationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Daos/ExtendedCountryInformationDao.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Daos/IModelDao.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Des-evaluacion-frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Des-evaluacion-frontend.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/AppDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AppDBContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/CountryInformation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CountryInformation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/ExtendedCountryInformation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ExtendedCountryInformation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Des-evaluacion-frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Des-evaluacion-frontend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/js/helpers/highcharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/helpers/highcharts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Des-evaluacion-frontend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Des-evaluacion-frontend.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/components/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/components/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/components/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/components/sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +71,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/029f9f1e122541219ec7d2778110ebab1b0000/4B/HttpContent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/149be6b907aa4e519744ab74683aa97752400/11/WebRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3f41cb29cb794b5595adb557f61fcbef1bae00/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/AppDBContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/53ef14d9e3b9404fad8f84cace173c678d8400/1C3/FutureFactory.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="204gCoYJ44bERLHgW54ZpMPm4fc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -120,6 +138,7 @@
       <updated>1635309165273</updated>
       <workItem from="1635309184760" duration="9222000" />
       <workItem from="1635356077484" duration="16884000" />
+      <workItem from="1635465048860" duration="8309000" />
     </task>
     <servers />
   </component>

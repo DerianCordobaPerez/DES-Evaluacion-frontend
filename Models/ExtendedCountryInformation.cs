@@ -1,12 +1,16 @@
 using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
 namespace Des_evaluacion_frontend.Models
 {
     public class ExtendedCountryInformation
     {
+        [JsonIgnore]
+        [Key]
+        public int Id { get; set; }
+        
         [JsonProperty(PropertyName = "location")]
         public string Location { get; set; }
         
@@ -66,6 +70,10 @@ namespace Des_evaluacion_frontend.Models
         
         public class DataExtendedCountryInformation
         {
+            [JsonIgnore]
+            [Key]
+            public int Id { get; set; }
+            
             [JsonProperty(PropertyName = "date")]
             public string Date { get; set; }
             

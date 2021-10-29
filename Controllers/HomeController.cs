@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
+using Des_evaluacion_frontend.Daos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Des_evaluacion_frontend.Models;
@@ -14,23 +16,18 @@ namespace Des_evaluacion_frontend.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly AppDBContext _context;
+
+        public HomeController(ILogger<HomeController> logger, AppDBContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            // Request from api
-            var request = WebRequest.Create("https://api.jsonbin.io/b/614507ed4a82881d6c510b6b/10");
-            
-            // Response obtain from request api
-            var response = request.GetResponse();
-
-            // Object (ExtendedCountryInformation) obtain from json response
-            var extendedCountryInformation = JsonConvert.DeserializeObject<List<ExtendedCountryInformation>>
-                (new StreamReader(response.GetResponseStream()!).ReadToEnd());
-
+            var extendedCountryInformation = await new ExtendedCountryInformationDao(_context).GetDataList();
             return View(extendedCountryInformation!);
         }
 

@@ -31,8 +31,10 @@ namespace Des_evaluacion_frontend
             // Context with mysql database
             services.AddDbContext<AppDBContext>(options => options.UseMySql(
                 Configuration.GetConnectionString("AppDBContextString"), 
-                new MySqlServerVersion(new Version(8, 0, 26))
-            ).EnableSensitiveDataLogging().EnableDetailedErrors());
+                new MySqlServerVersion(new Version(8, 0, 26)))
+                .EnableSensitiveDataLogging()
+                .EnableDetailedErrors()
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

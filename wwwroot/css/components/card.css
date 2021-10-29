@@ -1,7 +1,7 @@
 .card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 30px 30px 30px;
+    grid-template-rows: 25px 25px 25px;
     grid-template-areas: 
         "card-content card-content card-content card-content"
         "card-body card-body card-body card-body"
