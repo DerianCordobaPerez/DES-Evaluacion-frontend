@@ -1,20 +1,44 @@
-document.addEventListener('DOMContentLoaded', () => {
+const data = [
+    {location: 'Nicaragua', value: 110},
+    {location: 'Honduras', value: 20},
+    {location: 'El Salvador', value: 10},
+]
+
+/**
+ * They display the highchart with the data 
+ * passed as parameters.
+ * 
+ * @param {Object} series
+ * @param {Object} properties
+ * @returns void
+ * */
+const printHighChart = (series, properties) => {
+    const {name, type, title, xAxis} = properties
+
+    Highcharts.chart(`${name}`, {
+        chart: {type},
+        title,
+        xAxis: {categories: xAxis},
+        yAxis: {title: ''},
+        series
+    })
+}
+
+/**
+ *
+ * @param {Object} theme
+ **/
+const changeThemeHighchart = theme => {
+    
+    const {colors, chart, fonts} = theme
+    
     Highcharts.theme = {
-        colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572',
-            '#FF9655', '#FFF263', '#6AF9C4'],
-        chart: {
-            backgroundColor: {
-                linearGradient: [0, 0, 500, 500],
-                stops: [
-                    [0, 'rgb(255, 255, 255)'],
-                    [1, 'rgb(240, 240, 255)']
-                ]
-            },
-        },
+        colors,
+        chart,
         title: {
             style: {
                 color: '#00ACEC',
-                font: 'bold 14px "Trebuchet MS", Verdana, sans-serif'
+                font: fonts.title
             },
             floating: true,
             align: 'left',
@@ -24,12 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
         subtitle: {
             style: {
                 color: '#666666',
-                font: 'bold 10px "Trebuchet MS", Verdana, sans-serif'
+                font: fonts.subtitle
             }
         },
         legend: {
             itemStyle: {
-                font: '9pt Trebuchet MS, Verdana, sans-serif',
+                font: fonts.legend,
                 color: 'black'
             },
             itemHoverStyle:{
@@ -39,66 +63,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     Highcharts.setOptions(Highcharts.theme);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const properties = {
+        name: 'highchart-bar',
+        type: 'column',
+        title: {text: 'Total de Casos por pais (%)'},
+        xAxis: data.map(item => item.location),
+    }
+    
+    const series = data.map(item => ({
+        name: item.location,
+        data: [item.value]
+    }))
+    
+    printHighChart(series, properties)
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-    Highcharts.chart('highchart-bar', {
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Total de Casos por pais (%)'
-        },
-        xAxis: {
-            categories: ['Guatemala', 'Belice', 'Salvador', 'Honduras', 'Nicaragua', 'Costa Rica', 'Panama']
-        },
-        series: [{
-            name: 'Guatemala',
-            data: [3.2]
-        }, {
-            name: 'Belice',
-            data: [4.5]
-        }, {
-            name: 'Salvador',
-            data: [1.5]
-        }, {
-            name: 'Honduras',
-            data: [3.69]
-        }, {
-            name: 'Nicaragua',
-            data: [0.20]
-        }, {
-            name: 'Costa Rica',
-            data: [10.12]
-        }, {
-            name: 'Panama',
-            data: [10.92]
-        }]
-    })
-})
+    
+    const properties = {
+        name: 'highchart-line',
+        type: 'line',
+        title: {text: 'Fallecidos por COVID-19'},
+        xAxis: data.map(item => item.location),
+    }
 
-document.addEventListener('DOMContentLoaded', () => {
-    Highcharts.chart('highchart-line', {
-        chart: {
-            type: 'line'
-        },
-        title: {
-            text: 'Fruit Consumption'
-        },
-        xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
-        },
-        yAxis: {
-            title: {
-                text: 'Fruit eaten'
-            }
-        },
-        series: [{
-            name: 'Jane',
-            data: [1, 0, 4]
-        }, {
-            name: 'John',
-            data: [5, 7, 3]
-        }]
-    })
+    const series = data.map(item => ({
+        name: item.location,
+        data: [item.value, item.value * 2, item.value * 3]
+    }))
+
+    printHighChart(series, properties)
 })
