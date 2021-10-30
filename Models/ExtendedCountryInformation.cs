@@ -50,7 +50,7 @@ namespace Des_evaluacion_frontend.Models
         [JsonProperty(PropertyName = "human_development_index")]
         public double HumanDevelopmentIndex { get; set; }
         
-        [JsonProperty(PropertyName = "lat")]
+        [JsonProperty(PropertyName = "Lat")]
         public string Latitude { get; set; }
         
         [JsonProperty(PropertyName = "Lon")]

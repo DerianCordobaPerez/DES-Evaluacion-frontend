@@ -27,8 +27,7 @@ namespace Des_evaluacion_frontend.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var extendedCountryInformation = await new ExtendedCountryInformationDao(_context).GetDataList();
-            return View(extendedCountryInformation!);
+            return View(await new ExtendedCountryInformationDao(_context).GetDataList()!);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

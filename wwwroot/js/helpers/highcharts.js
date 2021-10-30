@@ -1,10 +1,12 @@
+let data = [];
+
 /**
- * They display the highchart with the data 
+ * They display the highchart with the data
  * passed as parameters.
- * 
+ *
  * @param {Object} series
  * @param {Object} properties
- * @returns void
+ * @returns {void}
  * */
 const printHighChart = (series, properties) => {
     const {name, type, title, xAxis} = properties
@@ -19,8 +21,10 @@ const printHighChart = (series, properties) => {
 }
 
 /**
- *
+ * Change the theme of the graphics.
+ * 
  * @param {Object} theme
+ * @returns {void}
  **/
 const changeThemeHighchart = theme => {
     
@@ -59,15 +63,21 @@ const changeThemeHighchart = theme => {
     Highcharts.setOptions(Highcharts.theme);
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    
-    let data = []
+/**
+ * Obtains the data in an extended way from the countries api.
+ * 
+ * @return {Promise} 
+ **/
+const getExtendedCountryInformation = async () => await getAllExtendedInformation().then(response => data = response)
 
-    await getAllExtendedInformation()
-        .then(response => data = response)
-    
+/**
+ * Create the chart in a columnar fashion.
+ *
+ * @returns {void}
+ * */
+const createHighChartBar = () => {
     const locations = data.map(item => item.location)
-    
+
     const properties = {
         name: 'highchart-bar',
         type: 'column',
@@ -79,28 +89,35 @@ document.addEventListener('DOMContentLoaded', async () => {
         name: item.location,
         data: [item.population]
     }))
-    
+
     printHighChart(series, properties)
-})
+}
 
-document.addEventListener('DOMContentLoaded', async () => {
-
-    let data = []
-
-    await getAllExtendedInformation()
-        .then(response => data = response)
-    
+/**
+ * Create the graph in a line fashion.
+ *
+ * @returns {void} 
+ **/
+const createHighChartLine = () => {
     const properties = {
         name: 'highchart-line',
         type: 'line',
         title: {text: 'Fallecidos por COVID-19'},
         xAxis: data.map(item => item.location),
     }
-
+    
     const series = data.map(item => ({
         name: item.location,
-        data: [item.population, item.population * 4, item.population * -3, item.population * -2, item.population * 10]
+        data: []
     }))
 
     printHighChart(series, properties)
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await getExtendedCountryInformation()
+    createHighChartBar()
+    createHighChartLine()
+    
+    data.map(item => addMaker(map, parseFloat(item.latitude), parseFloat(item.longitude)))
 })
