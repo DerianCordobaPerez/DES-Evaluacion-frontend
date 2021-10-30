@@ -7,15 +7,4 @@ function initMap() {
         center: initialPosition,
         zoom: 5,
     })
-
-    marker = new google.maps.Marker({
-        position: initialPosition,
-        title: "Hello world"
-    })
-
-    marker.setMap(map)
-
-    marker.addListener('click', e => {
-        // show modal window with all information
-    })
 }
