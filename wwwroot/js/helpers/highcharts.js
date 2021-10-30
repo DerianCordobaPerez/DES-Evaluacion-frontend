@@ -1,5 +1,3 @@
-let data = [];
-
 /**
  * They display the highchart with the data
  * passed as parameters.
@@ -20,46 +18,51 @@ const printHighChart = (series, properties) => {
     })
 }
 
-/**
- * Change the theme of the graphics.
- * 
- * @param {Object} theme
- * @returns {void}
- **/
-const changeThemeHighchart = theme => {
-    
-    const {colors, chart, fonts} = theme
-    
+const setThemeHighChart = () => {
     Highcharts.theme = {
-        colors,
-        chart,
+        colors: ["#017E73", "#E91D63", "#673AB7", "#FDCD36", "#DAE8F0", "#DDE0E3", "#FADEC7"],
+        chart: {
+            backgroundColor: null,
+            style: {
+                fontFamily: "Tahoma, serif"
+            }
+        },
         title: {
             style: {
                 color: '#00ACEC',
-                font: fonts.title
-            },
-            floating: true,
-            align: 'left',
-            x: 30,
-            y: 30
+                font: 'bold 16px, Tahoma, sans-serif'
+            }
         },
         subtitle: {
             style: {
-                color: '#666666',
-                font: fonts.subtitle
+                color: '#00ACEC',
+                font: 'bold 16px, Tahoma, sans-serif'
             }
+        },
+        tooltip: {
+            borderWidth: 0
         },
         legend: {
             itemStyle: {
-                font: fonts.legend,
-                color: 'black'
-            },
-            itemHoverStyle:{
-                color: 'gray'
+                fontWeight: '',
+                fontSize: '11px'
+            }
+        },
+        xAxis: {
+            labels: {
+                style: {
+                    color: '#6e6e70'
+                }
+            }
+        },
+        yAxis: {
+            labels: {
+                style: {
+                    color: '#6e6e70'
+                }
             }
         }
-    }
-
+    };
     Highcharts.setOptions(Highcharts.theme);
 }
 
@@ -68,7 +71,14 @@ const changeThemeHighchart = theme => {
  * 
  * @return {Promise} 
  **/
-const getExtendedCountryInformation = async () => await getAllExtendedInformation().then(response => data = response)
+const getExtendedCountryInformation = async () => 
+    await getAllInformation("extendedCountryInformation/getAll").then(response => this.data = response)
+
+const getCasesPercentage = () => {
+    const data = this.data.map(item => item.data)
+    const sum = data.map(item => getSumFromKey('totalCases', item))
+    return sum.map(item => item / sum.reduce((sum, item) => sum + item, 0) * 100)
+}
 
 /**
  * Create the chart in a columnar fashion.
@@ -76,22 +86,28 @@ const getExtendedCountryInformation = async () => await getAllExtendedInformatio
  * @returns {void}
  * */
 const createHighChartBar = () => {
-    const locations = data.map(item => item.location)
-
     const properties = {
         name: 'highchart-bar',
         type: 'column',
         title: {text: 'Total de Casos por pais (%)'},
-        xAxis: locations,
+        xAxis: this.data.map(item => item.location),
     }
 
-    const series = data.map(item => ({
-        name: item.location,
-        data: [item.population]
-    }))
-
+    let index = -1
+    const percentage = getCasesPercentage()
+    
+    const series = this.data.map((item) => {
+        ++index
+        return ({
+            name: item.location,
+            data: [parseFloat(percentage[index].toFixed(2))]
+        })
+    })
+    
     printHighChart(series, properties)
 }
+
+const createMarker = () => this.data.map(item => addMaker(parseFloat(item.latitude), parseFloat(item.longitude)))
 
 /**
  * Create the graph in a line fashion.
@@ -103,10 +119,10 @@ const createHighChartLine = () => {
         name: 'highchart-line',
         type: 'line',
         title: {text: 'Fallecidos por COVID-19'},
-        xAxis: data.map(item => item.location),
+        xAxis: this.data.map(item => item.location),
     }
     
-    const series = data.map(item => ({
+    const series = this.data.map(item => ({
         name: item.location,
         data: []
     }))
@@ -116,8 +132,8 @@ const createHighChartLine = () => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     await getExtendedCountryInformation()
+    setThemeHighChart()
     createHighChartBar()
     createHighChartLine()
-    
-    data.map(item => addMaker(map, parseFloat(item.latitude), parseFloat(item.longitude)))
+    createMarker()
 })

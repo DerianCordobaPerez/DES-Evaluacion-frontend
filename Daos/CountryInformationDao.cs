@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Des_evaluacion_frontend.Models;
@@ -11,30 +10,29 @@ using Newtonsoft.Json;
 
 namespace Des_evaluacion_frontend.Daos
 {
-    public class ExtendedCountryInformationDao : IModelDao<ExtendedCountryInformation>
+    public class CountryInformationDao : IModelDao<CountryInformation>
     {
         private readonly AppDBContext _context;
-
-        public ExtendedCountryInformationDao(AppDBContext context)
+        
+        public CountryInformationDao(AppDBContext context)
         {
             _context = context;
         }
-
-
-        public async Task<List<ExtendedCountryInformation>> GetDataList()
+        
+        public async Task<List<CountryInformation>> GetDataList()
         {
             try
             {
-                var request = WebRequest.Create(ApiService.ApiExtendedCountryInformation);
+                var request = WebRequest.Create(ApiService.ApiCountryInformation);
                 var response = await request.GetResponseAsync();
 
-                return JsonConvert.DeserializeObject<List<ExtendedCountryInformation>>
+                return JsonConvert.DeserializeObject<List<CountryInformation>>
                     (await new StreamReader(response.GetResponseStream()!).ReadToEndAsync());
             } 
             catch(Exception exception)
             {
                 Console.WriteLine(exception.Message);
-                return await _context.ExtendedCountryInformation.ToListAsync();
+                return await _context.CountryInformation.ToListAsync();
             }
         }
     }

@@ -1,14 +1,14 @@
-﻿@import 'components/header.css';
+﻿@import 'root.css';
+@import 'components/header.css';
 @import 'components/sidebar.css';
 @import 'components/map.css';
 @import 'components/footer.css';
-
-@import 'root.css';
+@import 'components/tooltip.css';
 
 body {
   margin: 30px auto;
   width: 90vw;
-  height: 95vh;
+  height: 100%;
   font-family: Tahoma, sans-serif;
 }
 
