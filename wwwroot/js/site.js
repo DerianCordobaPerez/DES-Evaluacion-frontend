@@ -6,5 +6,14 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: initialPosition,
         zoom: 5,
+        disableDefaultUI: true,
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_BOTTOM
+        },
+        fullscreenControl: true,
+        fullscreenControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_BOTTOM
+        },
     })
 }
