@@ -7,7 +7,6 @@ namespace Des_evaluacion_frontend.Controllers
 {
     public class CountryInformationController : Controller
     {
-        
         private readonly AppDBContext _context;
         
         public CountryInformationController(AppDBContext context)
@@ -16,7 +15,7 @@ namespace Des_evaluacion_frontend.Controllers
         }
         
         [HttpGet("/countryInformation/getAll", Name = "CountryInformationList")]
-        public async Task<IActionResult> GetExtendedCountryInformation()
+        public async Task<IActionResult> GetCountryInformation()
         {
             var countryInformation = await new CountryInformationDao(_context).GetDataList();
             return Ok(countryInformation);

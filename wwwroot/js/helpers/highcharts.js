@@ -8,7 +8,7 @@
  * */
 const printHighChart = (series, properties) => {
     const {name, type, title, xAxis} = properties
-
+    
     Highcharts.chart(`${name}`, {
         chart: {type},
         title,
@@ -83,50 +83,46 @@ const getCasesPerPercentage = () => {
 const getTotalDeathsPerDays = () => {
     let index = 0
     const data = this.data.map(item => item.data)
-    
-    console.log(data)
-    
+   
     // get first four days
     const latestDays = data.map(item => item[index++].date).slice(0, 4)
     
     // filter the data to get the total deaths per day
     const deathsPerDays = data.map(item => 
-        item.filter(
-            item => latestDays.includes(item.date))
-        )
+        item.filter(item => latestDays.includes(item.date)))
     
     const totalDeaths = deathsPerDays.map(item => 
-        item.map(item => item.totalDeaths)
-    )
+        item.map(item => item.totalDeaths))
     
     return {totalDeaths, latestDays}
 }
+
+const createMarker = () => this.data.map(async item => 
+    await addMaker(item.location, parseFloat(item.latitude), parseFloat(item.longitude)))
 
 /**
  * Create the chart in a columnar fashion.
  *
  * @returns {void}
  * */
-const createHighChartBar = () => {
+const createHighChartBar = () => {    
     const properties = {
         name: 'highchart-bar',
         type: 'column',
         title: {text: 'Total de Casos por pais (%)'},
-        xAxis: this.data.map(item => item.location),
+        xAxis: ' ',
     }
 
-    let index = -1
+    let index = 0
     const percentage = getCasesPerPercentage()
     
     const series = this.data.map((item) => ({
         name: item.location,
-        data: [parseFloat(percentage[++index].toFixed(2))]
+        data: [parseFloat(percentage[index++].toFixed(2))]
     }))
     
     printHighChart(series, properties)
 }
-
-const createMarker = () => this.data.map(item => addMaker(parseFloat(item.latitude), parseFloat(item.longitude)))
 
 /**
  * Create the graph in a line fashion.

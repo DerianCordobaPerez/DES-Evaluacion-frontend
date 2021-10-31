@@ -1,7 +1,7 @@
 @import 'card.css';
 
 .sidebar {
-    background: var(--dark-gray);
+    background: var(--medium-grey);
     grid-area: sidebar;
     overflow-y: auto;
     padding: 0 10px 10px 10px;    

@@ -1,13 +1,15 @@
 let lastMarker
 
-const addMaker = (lat, lng) => {
+const addMaker = async (country, lat, lng) => {
     const marker = new google.maps.Marker({
-        position: { lat, lng}, 
+        position: { lat, lng},
         map
     })
     
+    const modal = await createModalWindow(country)
+    
     const infoWindow = new google.maps.InfoWindow({
-        content: '<h1>Hola mundo</h1>'
+        content: `${modal}`
     })
 
     google.maps.event.addListener(marker, 'click', ((marker, infoWindow) => {

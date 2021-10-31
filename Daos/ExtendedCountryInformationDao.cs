@@ -19,23 +19,30 @@ namespace Des_evaluacion_frontend.Daos
         {
             _context = context;
         }
-
-
+        
         public async Task<List<ExtendedCountryInformation>> GetDataList()
         {
+            List<ExtendedCountryInformation> extendedCountryInformationList;
+            
             try
             {
                 var request = WebRequest.Create(ApiService.ApiExtendedCountryInformation);
                 var response = await request.GetResponseAsync();
 
-                return JsonConvert.DeserializeObject<List<ExtendedCountryInformation>>
+                extendedCountryInformationList = JsonConvert.DeserializeObject<List<ExtendedCountryInformation>>
                     (await new StreamReader(response.GetResponseStream()!).ReadToEndAsync());
+
+                if (extendedCountryInformationList == null || extendedCountryInformationList!.Count == 0)
+                    extendedCountryInformationList = await _context.ExtendedCountryInformation.ToListAsync();
+
             } 
             catch(Exception exception)
             {
                 Console.WriteLine(exception.Message);
-                return await _context.ExtendedCountryInformation.ToListAsync();
+                extendedCountryInformationList = await _context.ExtendedCountryInformation.ToListAsync();
             }
+
+            return extendedCountryInformationList;
         }
     }
 }

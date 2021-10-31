@@ -10,5 +10,7 @@ namespace Des_evaluacion_frontend.Models
         
         public DbSet<ExtendedCountryInformation> ExtendedCountryInformation { get; set; }
         public DbSet<CountryInformation> CountryInformation { get; set; }
+        
+        public DbSet<CountryInformation.DataCountryInformation> DataCountryInformation { get; set; }
     }
 }

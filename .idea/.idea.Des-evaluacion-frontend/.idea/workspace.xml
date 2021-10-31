@@ -9,8 +9,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb8da55-fc7b-4dd8-9d93-6aa4bb615327" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Helpers/EntityHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wwwroot/js/helpers/modalHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/CountryInformationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CountryInformationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daos/CountryInformationDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Daos/CountryInformationDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daos/ExtendedCountryInformationDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Daos/ExtendedCountryInformationDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20211028214746_Initial migration.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20211028214746_Initial migration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/AppDBContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/AppDBContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/AppDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AppDBContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/CountryInformation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CountryInformation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ApiService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ApiService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Des-evaluacion-frontend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Des-evaluacion-frontend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Des-evaluacion-frontend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Des-evaluacion-frontend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Des-evaluacion-frontend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/components/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/components/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/components/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/components/sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/components/tooltip.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/components/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/root.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/site.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wwwroot/js/helpers/highcharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/helpers/highcharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/js/helpers/mapHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/helpers/mapHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/js/helpers/tooltipHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/site.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +141,7 @@
       <workItem from="1635309184760" duration="9222000" />
       <workItem from="1635356077484" duration="16884000" />
       <workItem from="1635465048860" duration="41701000" />
-      <workItem from="1635622100663" duration="13778000" />
+      <workItem from="1635622100663" duration="38681000" />
     </task>
     <servers />
   </component>

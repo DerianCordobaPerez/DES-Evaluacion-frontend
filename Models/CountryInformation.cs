@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 
 namespace Des_evaluacion_frontend.Models
@@ -17,8 +18,14 @@ namespace Des_evaluacion_frontend.Models
         [JsonProperty(PropertyName = "ISO_CODE")]
         public string IsoCode { get; set; }
         
+        [NotMapped]
         [JsonProperty(PropertyName = "data")]
         public List<DataCountryInformation> Data { get; set; }
+        
+        [Required]
+        [Column("DataSerialized")]
+        public string DataSerialized { get; set; }
+            
 
         public class DataCountryInformation
         {
