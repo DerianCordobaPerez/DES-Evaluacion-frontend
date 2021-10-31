@@ -10,8 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ecb8da55-fc7b-4dd8-9d93-6aa4bb615327" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/js/helpers/highcharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/helpers/highcharts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,7 @@
       <workItem from="1635309184760" duration="9222000" />
       <workItem from="1635356077484" duration="16884000" />
       <workItem from="1635465048860" duration="41701000" />
-      <workItem from="1635622100663" duration="7155000" />
+      <workItem from="1635622100663" duration="13778000" />
     </task>
     <servers />
   </component>
