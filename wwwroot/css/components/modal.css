@@ -1,6 +1,6 @@
 .modal {
     display: grid;
-    grid-template-columns: 3fr 40px repeat(3, 1fr);
+    grid-template-columns: 3fr 40px repeat(2, 1fr) 40px;
     grid-template-rows: 100%;
     grid-template-areas: 
         "header header header header"
@@ -15,7 +15,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 100%;
     grid-template-areas: 
-        "modal-header-country modal-img-vaccine modal-header-vaccine modal-header-percentage"
+        "modal-header-country modal-img-vaccine modal-header-vaccine modal-header-percentage modal-header-selector"
     ;
     grid-column-gap: 10px;
 }
@@ -29,25 +29,26 @@
     grid-area: modal-img-vaccine;
 }
 
-.modal-header-country {
-    grid-area: modal-header-country;
+.modal-header > div {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modal-header-country {
+    grid-area: modal-header-country;
 }
 
 .modal-header-vaccine {
     grid-area: modal-header-vaccine;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .modal-header-percentage {
     grid-area: modal-header-percentage;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.modal-header-selector {
+    grid-area: modal-header-selector;
 }
 
 .modal-multiple-lines-content {
@@ -59,3 +60,22 @@
     line-height: 0;
 }
 
+.modal-title-span {
+    font-weight: bold;
+}
+
+.modal-subtitle-span {
+    color: var(--sky-blue);
+    font-weight: bold;
+}
+
+.modal-selector {
+    border: none;
+    background: none;
+    font-weight: bold;
+}
+
+.modal-selector:focus {
+    outline: none;
+    border: none;
+}
