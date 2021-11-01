@@ -22,6 +22,7 @@ const addMaker = async (country, lat, lng) => {
 }
 
 const closeLastInfoWindow = () => {
-    if (lastMarker)
+    if (lastMarker) {
         lastMarker.close()
+    }
 }

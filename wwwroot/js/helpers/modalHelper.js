@@ -17,9 +17,9 @@ const createModalWindow = async (country) => {
     let percentage = (max / 10000).toFixed(2)
     if(percentage > 100)
         percentage /= 10
-
+    
     return `
-        <div class="modal">
+        <div id="modal" class="modal">
             <div class="modal-header">
                 <div class="modal-header-country">
                     <img class="modal-img" src="img/ICN_Poblacion.svg" alt="img" />
@@ -58,39 +58,3 @@ const createModalWindow = async (country) => {
         </div>
     `
 }
-
-const printModalHighchart = () => {
-    const days = [
-        "2021-09-01",
-        "2021-09-02",
-        "2021-09-03",
-        "2021-09-04"
-    ]
-
-    const properties = {
-        name: 'modal-highchart',
-        type: 'line',
-        title: {text: ''},
-        xAxis: days,
-    }
-
-    const results = this.results.map(item => item.data)
-
-    const vaccinesPerDay = results.map(item =>
-        item.filter(item => item.date).slice(0, 4))
-
-    const totalVaccines = vaccinesPerDay.map(item =>
-        item.map(item => item.totalVaccinations))
-
-    const series = this.results.map((item, index) => ({
-        name: days[index],
-        data: totalVaccines[index]
-    }))
-
-    printHighChart(series, properties)
-}
-
-document.addEventListener('DOMContentLoaded', async () => {
-    await getCountryInformation()
-    printModalHighchart()
-})
