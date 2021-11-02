@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Des_evaluacion_frontend.Helpers;
 using Des_evaluacion_frontend.Models;
 using Des_evaluacion_frontend.Services;
 using Microsoft.EntityFrameworkCore;
@@ -13,14 +14,14 @@ namespace Des_evaluacion_frontend.Daos
 {
     public class ExtendedCountryInformationDao : IModelDao<ExtendedCountryInformation>
     {
-        private readonly AppDBContext _context;
+        private readonly AppDbContext _context;
 
-        public ExtendedCountryInformationDao(AppDBContext context)
+        public ExtendedCountryInformationDao(AppDbContext context)
         {
             _context = context;
         }
         
-        public async Task<List<ExtendedCountryInformation>> GetDataList()
+        public async Task<List<ExtendedCountryInformation>> All()
         {
             List<ExtendedCountryInformation> extendedCountryInformationList;
             
@@ -44,5 +45,30 @@ namespace Des_evaluacion_frontend.Daos
 
             return extendedCountryInformationList;
         }
+        
+        public async Task Create(ExtendedCountryInformation extendedCountryInformation)
+        {
+            _context.ExtendedCountryInformation.Add(extendedCountryInformation);
+            await _context.SaveChangesAsync();
+        }
+        
+        public async Task Update(ExtendedCountryInformation extendedCountryInformation)
+        {
+            _context.ExtendedCountryInformation.Update(extendedCountryInformation);
+            await _context.SaveChangesAsync();
+        }
+        
+        public async Task Delete(ExtendedCountryInformation extendedCountryInformation)
+        {
+            _context.ExtendedCountryInformation.Remove(extendedCountryInformation);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Drop()
+        {
+            _context.ExtendedCountryInformation.Clear();
+            await _context.SaveChangesAsync();
+        }
+
     }
 }

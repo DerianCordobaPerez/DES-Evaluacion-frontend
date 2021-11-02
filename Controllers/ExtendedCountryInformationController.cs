@@ -8,9 +8,9 @@ namespace Des_evaluacion_frontend.Controllers
     public class ExtendedCountryInformationController : Controller
     {
         
-        private readonly AppDBContext _context;
+        private readonly AppDbContext _context;
 
-        public ExtendedCountryInformationController(AppDBContext context)
+        public ExtendedCountryInformationController(AppDbContext context)
         {
             _context = context;
         }
@@ -18,7 +18,7 @@ namespace Des_evaluacion_frontend.Controllers
         [HttpGet("/extendedCountryInformation/getAll", Name = "ExtendedCountryInformationList")]
         public async Task<IActionResult> GetExtendedCountryInformation()
         {
-            var extendedCountryInformation = await new ExtendedCountryInformationDao(_context).GetDataList();
+            var extendedCountryInformation = await new ExtendedCountryInformationDao(_context).All();
             return Ok(extendedCountryInformation);
         }
     }

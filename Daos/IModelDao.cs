@@ -4,8 +4,8 @@ using Des_evaluacion_frontend.Models;
 
 namespace Des_evaluacion_frontend.Daos
 {
-    public interface IModelDao<T>
+    public interface IModelDao<T> where T : class
     {
-        Task<List<T>> GetDataList();
+        Task<List<T>> All();
     }
 }

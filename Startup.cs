@@ -29,7 +29,7 @@ namespace Des_evaluacion_frontend
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             
             // Context with mysql database
-            services.AddDbContext<AppDBContext>(options => options.UseMySql(
+            services.AddDbContext<AppDbContext>(options => options.UseMySql(
                 Configuration.GetConnectionString("AppDBContextString"), 
                 new MySqlServerVersion(new Version(8, 0, 26)))
                 .EnableSensitiveDataLogging()

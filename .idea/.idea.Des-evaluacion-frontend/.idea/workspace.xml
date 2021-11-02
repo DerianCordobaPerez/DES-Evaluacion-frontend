@@ -10,10 +10,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ecb8da55-fc7b-4dd8-9d93-6aa4bb615327" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Des-evaluacion-frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/css/components/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/components/modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/js/helpers/mapHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/helpers/mapHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/js/helpers/modalHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/helpers/modalHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/CountryInformationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CountryInformationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ExtendedCountryInformationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ExtendedCountryInformationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daos/CountryInformationDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Daos/CountryInformationDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daos/ExtendedCountryInformationDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Daos/ExtendedCountryInformationDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daos/IModelDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Daos/IModelDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20211031214710_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20211031214710_Initial.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/AppDBContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/AppDBContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/AppDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AppDBContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ApiService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ApiService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +118,8 @@
       <workItem from="1635309184760" duration="9222000" />
       <workItem from="1635356077484" duration="16884000" />
       <workItem from="1635465048860" duration="41701000" />
-      <workItem from="1635622100663" duration="48776000" />
+      <workItem from="1635622100663" duration="48815000" />
+      <workItem from="1635828021470" duration="1799000" />
     </task>
     <servers />
   </component>

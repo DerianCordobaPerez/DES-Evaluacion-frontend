@@ -14,27 +14,24 @@ namespace Des_evaluacion_frontend.Daos
 {
     public class CountryInformationDao : IModelDao<CountryInformation>
     {
-        private readonly AppDBContext _context;
+        private readonly AppDbContext _context;
         
-        public CountryInformationDao(AppDBContext context)
+        public CountryInformationDao(AppDbContext context)
         {
             _context = context;
         }
         
-        public async Task<List<CountryInformation>> GetDataList()
+        public async Task<List<CountryInformation>> All()
         {
             List<CountryInformation> countryInformationList;
 
             try
             {
-                var json = await File.ReadAllTextAsync("Models/InformationCA.json");
-                countryInformationList = JsonConvert.DeserializeObject<List<CountryInformation>>(json);
-                
-                /*var request = WebRequest.Create(ApiService.ApiExtendedCountryInformation);
+                var request = WebRequest.Create(ApiService.ApiCountryInformation);
                 var response = await request.GetResponseAsync();
 
                 countryInformationList = JsonConvert.DeserializeObject<List<CountryInformation>>
-                    (await new StreamReader(response.GetResponseStream()!).ReadToEndAsync());*/
+                    (await new StreamReader(response.GetResponseStream()!).ReadToEndAsync());
             }
             catch (Exception exception)
             {
@@ -44,21 +41,29 @@ namespace Des_evaluacion_frontend.Daos
 
             return countryInformationList;
         }
-        
-        public async Task<CountryInformation> GetDataByCountry(string country) 
-            => await _context.CountryInformation.FirstOrDefaultAsync(x => x.Country == country);
-
         public async Task Create(CountryInformation countryInformation)
         {
             await _context.CountryInformation.AddAsync(countryInformation);
             await _context.SaveChangesAsync();
         }
         
-        public void DeleteAll()
+        public async Task Update(CountryInformation countryInformation)
+        {
+            _context.CountryInformation.Update(countryInformation);
+            await _context.SaveChangesAsync();
+        }
+        
+        public async Task Delete(CountryInformation countryInformation)
+        {
+            _context.CountryInformation.Remove(countryInformation);
+            await _context.SaveChangesAsync();
+        }
+        
+        public async Task Drop()
         {
             _context.DataCountryInformation.Clear();
             _context.CountryInformation.Clear();
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
     }
