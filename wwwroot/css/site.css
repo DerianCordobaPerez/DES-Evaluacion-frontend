@@ -3,7 +3,7 @@
 @import 'components/sidebar.css';
 @import 'components/map.css';
 @import 'components/footer.css';
-@import 'components/tooltip.css';
+@import 'components/modal.css';
 
 body {
   margin: 30px auto;

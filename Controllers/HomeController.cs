@@ -16,9 +16,9 @@ namespace Des_evaluacion_frontend.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        private readonly AppDBContext _context;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, AppDBContext context)
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _logger = logger;
             _context = context;
@@ -27,7 +27,7 @@ namespace Des_evaluacion_frontend.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await new ExtendedCountryInformationDao(_context).GetDataList()!);
+            return View(await new ExtendedCountryInformationDao(_context).All()!);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

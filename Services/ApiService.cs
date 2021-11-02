@@ -1,10 +1,9 @@
 namespace Des_evaluacion_frontend.Services
 {
-    public class ApiService
+    public abstract class ApiService
     {
-        public static readonly string ApiCountryInformation = "https://api.jsonbin.io/b/614505444a82881d6c510a08";
+        public static readonly string ApiCountryInformation = "https://dl.dropboxusercontent.com/s/7vuldxviiuuqzlw/VACUNADOS_X_PAIS.json";
         
-        public static readonly string ApiExtendedCountryInformation = "https://api.jsonbin.io/b/614507ed4a82881d6c510b6b/10";
-
+        public static readonly string ApiExtendedCountryInformation = "https://dl.dropboxusercontent.com/s/6ms3bgamnksygqt/ESTADISTICAS_X_PAIS.json";
     }
 }
