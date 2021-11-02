@@ -14,6 +14,10 @@ namespace Des_evaluacion_frontend.Controllers
             _context = context;
         }
         
+        /// <summary>
+        /// Get all countries
+        /// </summary>
+        /// <returns>All countries</returns>
         [HttpGet("/countryInformation/getAll", Name = "CountryInformationList")]
         public async Task<IActionResult> GetCountryInformation()
         {
