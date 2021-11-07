@@ -18,9 +18,7 @@ const createModalWindow = async (country) => {
     if(percentage > 100)
         percentage /= 10
     
-    console.log(max, percentage, resultsVaccines)
-    
     const formatVaccines = numberWithCommas(max)
     
-    return ({formatVaccines, resultsVaccines, percentage})
+    return ({formatVaccines, resultsVaccines, percentage, totalVaccinations})
 }

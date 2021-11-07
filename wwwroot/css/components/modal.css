@@ -3,8 +3,8 @@
     grid-template-columns: 3fr 40px repeat(2, 1fr) 40px;
     grid-template-rows: 100%;
     grid-template-areas: 
-        "header header header header"
-        "content content content content"
+        "header header header header header"
+        "content content content content content"
     ;
     background: var(--white);
     padding: 10px;
@@ -84,6 +84,15 @@
     border: none;
 }
 
-.modal-show {
-    display: grid;
+.modal-body {
+    grid-area: content;
+    width: 100%;
+}
+
+#modal-highchart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    max-width: 50vw;
 }
