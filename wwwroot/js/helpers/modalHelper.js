@@ -18,43 +18,9 @@ const createModalWindow = async (country) => {
     if(percentage > 100)
         percentage /= 10
     
-    return `
-        <div id="modal" class="modal">
-            <div class="modal-header">
-                <div class="modal-header-country">
-                    <img class="modal-img" src="img/ICN_Poblacion.svg" alt="img" />
-                    <span class="modal-title-span">${country}</span>
-                </div>
-                
-                <div class="modal-header-vaccine">
-                   
-                    <div class="modal-container-img">
-                        <img class="modal-img" src="img/ICN_Vacunas.svg" alt="img" />
-                    </div>
-                
-                    <div class="modal-multiple-lines-content">
-                        <h3 class="modal-title-span">${numberWithCommas(max)}</h3>
-                        <p class="modal-subtitle-span">Personas vacunadas</p>                    
-                    </div>              
-                </div>
-                
-                <div class="modal-header-percentage">
-                    <div class="modal-multiple-lines-content">
-                        <h3 class="modal-title-span">${percentage}%</h3>
-                        <p class="modal-subtitle-span">Porcentaje vacunados</p>                    
-                    </div>
-                </div>
-                
-                <div class="modal-header-selector">
-                    <select class="modal-selector">
-                        ${resultsVaccines.map(item => `<option value="${item}">${item}</option>`).join('')}
-                    </select>
-                </div>
-            </div>
-            
-            <div class="modal-body">
-                <div id="modal-highchart"></div>
-            </div>
-        </div>
-    `
+    console.log(max, percentage, resultsVaccines)
+    
+    const formatVaccines = numberWithCommas(max)
+    
+    return ({formatVaccines, resultsVaccines, percentage})
 }

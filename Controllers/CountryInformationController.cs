@@ -9,6 +9,10 @@ namespace Des_evaluacion_frontend.Controllers
     {
         private readonly AppDbContext _context;
         
+        /// <summary>
+        /// Constructor CountryInformationController
+        /// </summary>
+        /// <param name="context"></param>
         public CountryInformationController(AppDbContext context)
         {
             _context = context;

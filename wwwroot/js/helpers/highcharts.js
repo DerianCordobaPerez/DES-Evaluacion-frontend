@@ -12,10 +12,6 @@ const getCasesPerPercentage = () => {
     return sum.map(item => item / sum.reduce((sum, item) => sum + item, 0) * 100)
 }
 
-const getLatestDays = (data) => {
-    
-}
-
 const getTotalDeathsPerDays = () => {
     const data = this.data.map(item => item.data)
    
@@ -33,8 +29,7 @@ const getTotalDeathsPerDays = () => {
     return {totalDeaths, latestDays}
 }
 
-const createMarker = () => this.data.map(async item => 
-    await addMaker(item.location, parseFloat(item.latitude), parseFloat(item.longitude)))
+const createMarker = () => this.data.map(async item => await addMaker(item.location, parseFloat(item.latitude), parseFloat(item.longitude)))
 
 /**
  * Create the chart in a columnar fashion.
